@@ -14,7 +14,7 @@ function Timer({ expiryTimestamp }) {
     seconds,
     minutes
   } = useTimer({ expiryTimestamp, onExpire: async () => {
-    alertify.error("Game is over.!");
+    alertify.error("Game is over!");
     await alertDelay(2000);
     window.location.reload();
   } });
