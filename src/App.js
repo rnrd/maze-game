@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Buttons from './Buttons';
+import Timer from "./Timer";
+import {Container, Row, Col} from "reactstrap";
+
 
 function App() {
+
+
+  const time = new Date();
+  time.setSeconds(time.getSeconds() + 120); 
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+      <Row>
+      <Col sm="8">
+      <h1 className="app-h1">Maze Game</h1>
+        </Col>
+       </Row>
+       <Container>
+         <Row>
+           <Col sm="8">
+           <Buttons/>
+           </Col>
+           <Col sm="4">
+           <Timer  expiryTimestamp={time}/>
+           </Col>
+        </Row>
+       </Container>
+      </Container>
     </div>
   );
 }
