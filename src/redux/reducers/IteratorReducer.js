@@ -122,6 +122,7 @@ const iteratorReducer=(state=initialState,action)=>{
                 for(let i=0; i<bottomArray.length;i++){
                     if(newBottomArray[0][0]===bottomArray[i][0] && newBottomArray[0][1]===bottomArray[i][1]){
                         
+                        
                         bottomCheck=true;
                         checkList[3]=true;
                         
